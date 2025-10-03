@@ -27,18 +27,18 @@
         }
 
         html {
-            font-size: 14px;
+            font-size: 14px; /* Base font size for better scaling */
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
+            font-size: 1rem; /* Use rem for scalability */
             line-height: 1.6;
             color: var(--text-light);
             background-color: var(--white);
             overflow-x: hidden;
             scroll-behavior: smooth;
-            min-width: 320px;
+            min-width: 320px; /* Minimum mobile width */
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -47,7 +47,7 @@
             line-height: 1.2;
             color: var(--text-dark);
             margin-bottom: 1rem;
-            word-wrap: break-word;
+            word-wrap: break-word; /* Prevent text overflow */
             overflow-wrap: break-word;
         }
 
@@ -79,9 +79,9 @@
         }
 
         .container {
-            max-width: 1440px;
+            max-width: 1440px; /* Increased for larger screens */
             margin: 0 auto;
-            padding: 0 clamp(15px, 3vw, 30px);
+            padding: 0 clamp(15px, 3vw, 30px); /* Responsive padding */
             width: 100%;
         }
 
@@ -282,11 +282,11 @@
         /* Hero Section - Mobile Optimized */
         .hero {
             position: relative;
-            height: clamp(500px, 100vh, 800px);
+            height: clamp(500px, 100vh, 800px); /* Flexible height */
             display: flex;
             align-items: center;
             overflow: hidden;
-            min-height: 500px;
+            min-height: 500px; /* Minimum height for mobile */
         }
 
         .hero-video {
@@ -299,26 +299,14 @@
             z-index: -1;
         }
 
-        /* Mobile ke liye video fallback - IMPORTANT */
+        /* Fallback for mobile video issues */
         @media (max-width: 768px) {
             .hero-video {
                 display: none;
             }
             .hero {
                 background: linear-gradient(135deg, rgba(109, 86, 94, 0.9), rgba(30, 41, 59, 0.8)), 
-                            url('img1.webp') center/cover no-repeat;
-            }
-            
-            /* Agar img1.webp available nahi hai toh yeh use hoga */
-            .hero::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(135deg, rgba(109, 86, 94, 0.9), rgba(30, 41, 59, 0.8));
-                z-index: -1;
+                            url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
             }
         }
 
@@ -1110,9 +1098,8 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="img1.webp">
+        <video class="hero-video" autoplay muted loop playsinline>
             <source src="video.mp4" type="video/mp4">
-            <source src="video.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
         <div class="container">
@@ -1128,7 +1115,7 @@
     <section class="about" id="about">
         <div class="container about-container">
             <div class="about-image">
-                <img src="img1.webp" alt="About Stars Events" onerror="this.src='https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="About Stars Events">
             </div>
             <div class="about-content">
                 <h2>About Us</h2>
@@ -1214,7 +1201,7 @@
                 </div>
             </div>
             <div class="graduation-image">
-                <img src="img2.webp" alt="Graduation Celebration" onerror="this.src='https://imgs.search.brave.com/Cqlh-8xZFehw27XTUcLPERV74J4dem8As_mX3qVKt8k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb21t/ZW5jZW1lbnQuaGFy/dmFyZC5lZHUvc2l0/ZXMvZy9maWxlcy9v/bW51dW0zOTExL2Zp/bGVzL3N0eWxlcy9o/d3BfMjFfOV9fMTky/MHg4MjUvcHVibGlj/LzIwMjQtMTEvSGFy/dmFyZDE4NC5KUEc_/aXRvaz1RVEhiQ1Jz/bg'">
+                <img src="https://imgs.search.brave.com/Cqlh-8xZFehw27XTUcLPERV74J4dem8As_mX3qVKt8k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb21t/ZW5jZW1lbnQuaGFy/dmFyZC5lZHUvc2l0/ZXMvZy9maWxlcy9v/bW51dW0zOTExL2Zp/bGVzL3N0eWxlcy9o/d3BfMjFfOV9fMTky/MHg4MjUvcHVibGlj/LzIwMjQtMTEvSGFy/dmFyZDE4NC5KUEc_/aXRvaz1RVEhiQ1Jz/bg" alt="Graduation Celebration">
             </div>
         </div>
     </section>
@@ -1286,7 +1273,7 @@
             
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="img1.webp" alt="Luxury Wedding" class="portfolio-image" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury Wedding" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h3>Luxury Wedding</h3>
                         <p>An opulent celebration at a historic estate</p>
@@ -1294,7 +1281,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="img2.webp" alt="Corporate Gala" class="portfolio-image" onerror="this.src='https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Corporate Gala" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h3>Corporate Gala</h3>
                         <p>An elegant evening for industry leaders</p>
@@ -1302,7 +1289,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="img3.webp" alt="Product Launch" class="portfolio-image" onerror="this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Product Launch" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h3>Product Launch</h3>
                         <p>A sophisticated brand unveiling event</p>
@@ -1310,7 +1297,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="img1.webp" alt="Graduation Party" class="portfolio-image" onerror="this.src='https://imgs.search.brave.com/g5ANrgvRKHvsPMZEeF5A4CF4Zz-TJ1xzGPTGjqlEeeY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE0/OTgyMzUwMy9waG90/by9ncm91cC1vZi1n/cmFkdWF0ZXMtZHVy/aW5nLWNvbW1lbmNl/bWVudC1jb25jZXB0/LWVkdWNhdGlvbi1j/b25ncmF0dWxhdGlv/bi1pbi11bml2ZXJz/aXR5LmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1mLVBfbC1u/TXB2eXVGck1FUU8x/V1FSWXBZWVNOSGF2/MUFiX2ZxNkdPM2tV/PQ'">
+                    <img src="https://imgs.search.brave.com/g5ANrgvRKHvsPMZEeF5A4CF4Zz-TJ1xzGPTGjqlEeeY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE0/OTgyMzUwMy9waG90/by9ncm91cC1vZi1n/cmFkdWF0ZXMtZHVy/aW5nLWNvbW1lbmNl/bWVudC1jb25jZXB0/LWVkdWNhdGlvbi1j/b25ncmF0dWxhdGlv/bi1pbi11bml2ZXJz/aXR5LmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1mLVBfbC1u/TXB2eXVGck1FUU8x/V1FSWXBZWVNOSGF2/MUFiX2ZxNkdPM2tV/PQ" alt="Graduation Party" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h3>Graduation Party</h3>
                         <p>A memorable celebration of academic success</p>
@@ -1318,7 +1305,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="img2.webp" alt="Birthday Celebration" class="portfolio-image" onerror="this.src='https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80'">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Birthday Celebration" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h3>Birthday Celebration</h3>
                         <p>A milestone birthday with personalized touches</p>
@@ -1326,7 +1313,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="img3.webp" alt="Concert Event" class="portfolio-image" onerror="this.src='https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'">
+                    <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Concert Event" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h3>Concert Event</h3>
                         <p>Professional sound and lighting production</p>
@@ -1389,7 +1376,7 @@
                     </div>
                     <div>
                         <h3>Email</h3>
-                        <p><a href="mailto:hanastars2011@gmail.com" class="contact-link">hanastars2011@gmail.com</a></p>
+                        <p><a href="hanastars2011@gmail.com" class="contact-link">hanastars2011@gmail.com</a></p>
                     </div>
                 </div>
                 
@@ -1578,53 +1565,18 @@
             });
         });
 
-        // Mobile video optimization - IMPROVED
+        // Mobile video optimization
         function optimizeForMobile() {
             const isMobile = window.innerWidth <= 768;
             const heroVideo = document.querySelector('.hero-video');
             
             if (isMobile && heroVideo) {
-                // Mobile pe video hide karo aur background image show karo
-                heroVideo.style.display = 'none';
-            } else if (heroVideo) {
-                // Desktop pe video show karo
-                heroVideo.style.display = 'block';
-                try {
-                    heroVideo.play().catch(e => {
-                        console.log('Video autoplay failed:', e);
-                    });
-                } catch (e) {
-                    console.log('Video play error:', e);
-                }
+                heroVideo.pause();
             }
-        }
-
-        // Video play/pause management
-        function handleVideoPlayback() {
-            const heroVideo = document.querySelector('.hero-video');
-            if (!heroVideo) return;
-
-            // Intersection Observer for video playback
-            const videoObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && window.innerWidth > 768) {
-                        // Video visible hai aur desktop pe hai
-                        heroVideo.play().catch(e => {
-                            console.log('Video play failed:', e);
-                        });
-                    } else {
-                        // Video visible nahi hai
-                        heroVideo.pause();
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            videoObserver.observe(heroVideo);
         }
 
         // Initial optimization
         optimizeForMobile();
-        handleVideoPlayback();
         
         // Re-optimize on resize
         window.addEventListener('resize', optimizeForMobile);
@@ -1646,21 +1598,6 @@
             }
             lastTouchEnd = now;
         }, false);
-
-        // Force video reload for mobile compatibility
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.querySelector('.hero-video');
-            if (video && window.innerWidth > 768) {
-                video.load();
-                video.play().catch(function(error) {
-                    console.log('Video autoplay failed, trying with mute:', error);
-                    video.muted = true;
-                    video.play().catch(function(e) {
-                        console.log('Video play failed even with mute:', e);
-                    });
-                });
-            }
-        });
     </script>
 </body>
 </html>
